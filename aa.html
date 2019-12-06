@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery AJAX POST Form</title>
+    <meta charset="utf-8">
+	<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+Hello World
+<script>
+	$.ajax({
+	  url: "https://si01-test.prod.bairthings.com/bca/api/documentReceiver/v1/networks/local/flows/113/steps/114",
+	  type: 'POST',
+	  headers: {
+		  "Access-Control-Allow-Origin" : "https://si01-test.prod.bairthings.com/bca/api/documentReceiver/v1/networks/local/flows/113/steps/114",
+		  "Authorization": "Bearer eyJ4NXQjUzI1NiI6ImZVZ2FFTWFFN2RZdG9KZ3Frejk2bVVXOUlKQVhKbEV6NUJOUWpLUUhTb0UiLCJ4NXQiOiJMN21URk9SU0I0OXRJMzQxLUhPSGVSMWFoX1EiLCJraWQiOiJTSUdOSU5HX0tFWSIsImFsZyI6IlJTMjU2In0.eyJ1c2VyX3R6IjoiQW1lcmljYVwvQ2hpY2FnbyIsInN1YiI6InJhamFua2FzaHlhcDc1K2V0cF9kZWFsZXJfbWFoZXNoQGdtYWlsLmNvbSIsInVzZXJfbG9jYWxlIjoiZW4iLCJ1c2VyLnRlbmFudC5uYW1lIjoiaWRjcy1jODkwNDM0YWZlN2M0NjlmOTMzMjVkZDhhYjM1ZmM2ZiIsImlzcyI6Imh0dHBzOlwvXC9pZGVudGl0eS5vcmFjbGVjbG91ZC5jb21cLyIsInVzZXJfdGVuYW50bmFtZSI6ImlkY3MtYzg5MDQzNGFmZTdjNDY5ZjkzMzI1ZGQ4YWIzNWZjNmYiLCJjbGllbnRfaWQiOiJUZXN0X3NpMDFfQVBQSUQiLCJzdWJfdHlwZSI6InVzZXIiLCJzY29wZSI6IlwvYmNhXC9hcGkiLCJjbGllbnRfdGVuYW50bmFtZSI6ImlkY3MtYzg5MDQzNGFmZTdjNDY5ZjkzMzI1ZGQ4YWIzNWZjNmYiLCJ1c2VyX2xhbmciOiJlbiIsImV4cCI6MTU3NTYyODA4MCwiaWF0IjoxNTc1NjI0NDgwLCJjbGllbnRfZ3VpZCI6IjQ4MWYwMjU5OTExZjQxOTJiMmI5NDQ4NTg0MTQzZDk4IiwiY2xpZW50X25hbWUiOiJUZXN0X3NpMDEiLCJ0ZW5hbnQiOiJpZGNzLWM4OTA0MzRhZmU3YzQ2OWY5MzMyNWRkOGFiMzVmYzZmIiwianRpIjoiMDE5MjM1MWUtNThjZS00ZjkzLTliMTEtZmZhYTYzZGJkOGI3IiwidXNlcl9kaXNwbGF5bmFtZSI6Ik1haGVzaCBNYWl0aGFuaSIsInN1Yl9tYXBwaW5nYXR0ciI6InVzZXJOYW1lIiwicHJpbVRlbmFudCI6dHJ1ZSwidG9rX3R5cGUiOiJBVCIsImNhX2d1aWQiOiJjYWNjdC1lNzNmMzdmOThmYTE0MWFkODBiZjEyOGE4MGQ5NmY3ZSIsImF1ZCI6Imh0dHBzOlwvXC9zaTAxLXRlc3QucHJvZC5iYWlydGhpbmdzLmNvbSIsInVzZXJfaWQiOiJhZmIyMjRlOWJjYjk0YzhhYWU1Yjg1MDEwOGJlMzljYyIsInRlbmFudF9pc3MiOiJodHRwczpcL1wvaWRjcy1jODkwNDM0YWZlN2M0NjlmOTMzMjVkZDhhYjM1ZmM2Zi5pZGVudGl0eS5vcmFjbGVjbG91ZC5jb206NDQzIn0.BeCpG7Yh1Zj4317RmloLCWiBm4y67w5Dz4YTlGn_YtOLnMmIBHprcOt20TSKLZH0jqwhANEhhsEBes2AW6a9ehz56ZHQHJ40KkiO6UVXkkCJcAr71HI3PhehiSSqffRTVy2t4Wqz8vV_TPUo_UpFGmaBti4SK-B0uCrIoWw7Qxhfmg1_zJFNRez8bbIP28oFMwtluMnMrW5mESDO66MAOLzSD3g818WOpDTjK1Mfz2Z-xBoxMXKoLAETaR8nO3s__6khqFha5R6eekk_p-8A0AT8iShtRKnnJ8ctLOCYK7RYvRexblb_AVmdC_3uUpWJUWYZ1PLvo4e6G4_kqhuASQ"},
+	  data: "{\"vin\":\"123\",\"RepairpartID\":4566,\"NewpartID\":43324,\"DealerId\":\"112\",\"customerId\":\"1111\",\"WarrantyNumber\":\"8787\",\"Warrantystartdate\":\"11\/11\/2019\",\"WarrantyendDate\":\"11\/12\/2020\",\"CoverageType\":\"full\",\"Price\":\"2\",\"brandName\":\"Maruti\",\"VehicleType\":\"SUV\",\"DealerName\":\"Loki\",\"RepairDate\":\"9\/11\/2021\",\"creationDate\":\"12\/3\/2019\"}",
+	  success: function (response){
+		alert('Thanks for your comment!'); 
+	  },
+	  error: function(errorThrown) {
+		console.log("---------"+JSON.stringify(errorThrown));
+	  }
+	});
+</script>
+</body>
+</html>
